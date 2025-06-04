@@ -1,0 +1,408 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:MyCustomControlLib">
+
+    <!--#region 001 - 图片-->
+    <Image x:Key="DiMiniButton">
+        <Image.Source>
+            <DrawingImage>
+                <DrawingImage.Drawing>
+                    <DrawingGroup ClipGeometry="M0,0 V1024 H1024 V0 H0 Z">
+                        <GeometryDrawing Brush="#FF000000" Geometry="F1 M1024,1024z M0,0z M78.633918,396.690788L936.837848,396.690788 936.837848,555.00035 78.633918,555.00035 78.633918,396.690788z" />
+                    </DrawingGroup>
+                </DrawingImage.Drawing>
+            </DrawingImage>
+        </Image.Source>
+    </Image>
+    <Image x:Key="DiMaxButton">
+        <Image.Source>
+            <DrawingImage>
+                <DrawingImage.Drawing>
+                    <DrawingGroup ClipGeometry="M0,0 V1024 H1024 V0 H0 Z">
+                        <GeometryDrawing Brush="#FF000000" Geometry="F1 M1024,1024z M0,0z M915.995,960.219L110.228,960.219C85.966,960.219,66.228,940.481,66.228,916.219L66.228,110.228C66.228,85.966,85.966,66.228,110.228,66.228L915.996,66.228C940.258,66.228,959.996,85.966,959.996,110.228L959.996,916.219C959.995,940.48,940.257,960.219,915.995,960.219z M130.228,896.219L895.996,896.219 895.996,130.228 130.228,130.228 130.228,896.219z" />
+                        <GeometryDrawing Brush="#FF000000" Geometry="F1 M1024,1024z M0,0z M124.462,128.688L927.995,128.688 927.995,192.688 124.462,192.688z" />
+                    </DrawingGroup>
+                </DrawingImage.Drawing>
+            </DrawingImage>
+        </Image.Source>
+    </Image>
+    <Image x:Key="DiCloseButton">
+        <Image.Source>
+            <DrawingImage>
+                <DrawingImage.Drawing>
+                    <DrawingGroup ClipGeometry="M0,0 V1024 H1024 V0 H0 Z">
+                        <GeometryDrawing Brush="#FF102D40" Geometry="F1 M1024,1024z M0,0z M567.168,512L756.352,700.352A40.064,40.064,0,0,1,757.12,756.032A37.76,37.76,0,0,1,702.72,756.864L512,566.912 321.28,756.864A37.76,37.76,0,0,1,266.88,756.096A40.064,40.064,0,0,1,267.648,700.416L456.832,512 267.648,323.648A40.064,40.064,0,0,1,266.88,267.968A37.76,37.76,0,0,1,321.28,267.136L512,457.088 702.72,267.136A37.76,37.76,0,0,1,757.12,267.904A40.064,40.064,0,0,1,756.352,323.584L567.168,512z">
+                            <GeometryDrawing.Pen>
+                                <Pen Brush="#FF102D40" Thickness="1" />
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                    </DrawingGroup>
+                </DrawingImage.Drawing>
+            </DrawingImage>
+        </Image.Source>
+    </Image>
+
+    <Image x:Key="DiTopmostFalse" RenderTransformOrigin="0.5,0.5">
+        <Image.Source>
+            <DrawingImage>
+                <DrawingImage.Drawing>
+                    <DrawingGroup ClipGeometry="M0,0 V1024 H1024 V0 H0 Z">
+                        <GeometryDrawing Brush="#FF000000" Geometry="F1 M1024,1024z M0,0z M557.728,688L557.728,976.384 466.24,976.384 466.24,688 227.52,688C217.92,688,209.472,684.288,202.56,676.736A37.824,37.824,0,0,1,192,649.984C192,601.216 206.432,557.28 235.584,518.144 264.704,479.168 297.504,459.584 334.144,459.584L334.144,200.512C314.848,200.512,298.304,192.96,284.096,177.856A76.16,76.16,0,0,1,262.976,124.256C262.976,103.584 270.016,85.856 284.096,70.656 298.08,55.68 314.816,48 334.144,48L689.728,48C709.024,48 725.568,55.552 739.776,70.656 753.76,85.76 760.928,103.584 760.928,124.256 760.928,144.928 753.888,162.656 739.808,177.856 725.696,193.088 709.024,200.512 689.728,200.512L689.728,459.456C726.368,459.456,759.296,479.04,788.288,518.016A215.424,215.424,0,0,1,832,649.984C832,660.256 828.544,669.312 821.472,676.736 814.432,684.16 806.112,688 796.512,688L557.76,688z" />
+                    </DrawingGroup>
+                </DrawingImage.Drawing>
+            </DrawingImage>
+        </Image.Source>
+    </Image>
+    <Image x:Key="DiTopmostTrue">
+        <Image.Source>
+            <DrawingImage>
+                <DrawingImage.Drawing>
+                    <DrawingGroup ClipGeometry="M0,0 V1024 H1024 V0 H0 Z">
+                        <GeometryDrawing Brush="#FF102D40" Geometry="F1 M1024,1024z M0,0z M567.168,512L756.352,700.352A40.064,40.064,0,0,1,757.12,756.032A37.76,37.76,0,0,1,702.72,756.864L512,566.912 321.28,756.864A37.76,37.76,0,0,1,266.88,756.096A40.064,40.064,0,0,1,267.648,700.416L456.832,512 267.648,323.648A40.064,40.064,0,0,1,266.88,267.968A37.76,37.76,0,0,1,321.28,267.136L512,457.088 702.72,267.136A37.76,37.76,0,0,1,757.12,267.904A40.064,40.064,0,0,1,756.352,323.584L567.168,512z">
+                            <GeometryDrawing.Pen>
+                                <Pen Brush="#FF102D40" Thickness="1" />
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                    </DrawingGroup>
+                </DrawingImage.Drawing>
+            </DrawingImage>
+        </Image.Source>
+    </Image>
+    <!--#endregion-->
+
+    <!--#region 002 - 关联的控件的样式-->
+    <Style x:Key="WindowButtonStyle" TargetType="Button">
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Width" Value="15" />
+        <Setter Property="Height" Value="15" />
+        <Setter Property="Margin" Value="1" />
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        x:Name="Border"
+                        Width="{TemplateBinding Width}"
+                        Height="{TemplateBinding Height}"
+                        Padding="1.5"
+                        BorderBrush="Transparent"
+                        BorderThickness="1">
+                        <ContentPresenter />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Border" Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                        <GradientStop Offset="0" Color="LightGray" />
+                                        <GradientStop Offset="0.3" Color="White" />
+                                        <GradientStop Offset="0.5" Color="Transparent" />
+                                        <GradientStop Offset="0.8" Color="White" />
+                                        <GradientStop Offset="1" Color="LightGray" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter TargetName="Border" Property="BorderBrush" Value="White" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="Border" Property="BorderBrush" Value="LightGray" />
+                            <Setter TargetName="Border" Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                        <GradientStop Offset="0" Color="Transparent" />
+                                        <GradientStop Offset="0.3" Color="White" />
+                                        <GradientStop Offset="0.5" Color="LightGray" />
+                                        <GradientStop Offset="0.8" Color="White" />
+                                        <GradientStop Offset="1" Color="Transparent" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter TargetName="Border" Property="Margin" Value="1,1,-1,-1" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="TopmostCheckBoxStyle" TargetType="CheckBox">
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="CheckBox">
+                    <Border Padding="3.5">
+                        <ContentControl
+                            x:Name="Content"
+                            Content="{StaticResource DiTopmostFalse}"
+                            RenderTransformOrigin="0.5,0.5">
+                            <ContentControl.RenderTransform>
+                                <RotateTransform Angle="90" />
+                            </ContentControl.RenderTransform>
+                        </ContentControl>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="Content" Property="RenderTransform">
+                                <Setter.Value>
+                                    <RotateTransform Angle="45" />
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="MenuButtonStyle" TargetType="ToggleButton">
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <Grid Background="Transparent">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.75*" />
+                            <ColumnDefinition Width="0.25*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid>
+                            <Path
+                                Width="16"
+                                Data="M961.9 522.7L851.4 412.2l135.4-135.4c20-20 20-52.8 0-72.8s-52.8-20-72.8 0L778.6 339.4l-99-99L815 105c20-20 20-52.8 0-72.8s-52.8-20-72.8 0L606.8 167.6 496.3 57.1c-19.9-19.9-52.4-19.9-72.3 0s-19.9 52.4 0 72.3L889.6 595c19.9 19.9 52.4 19.9 72.3 0s19.9-52.4 0-72.3zM848.2 603L415.3 170.1c-1.9-1.9-5-1.9-6.9 0l-59.8 59.8-113.5 113.5-0.2 0.2-0.6 0.6c-39.4 76.5-39.4 167.4-43.2 239.4L435.5 828c71.5-5.4 175.2-2.5 238.5-44.1l0.8-0.8 0.1 0.1 173.3-173.3c1.9-1.9 1.9-5 0-6.9zM386.6 826.9L191.4 631.7c-13.6-13.6-35.7-13.6-49.3 0-13.6 13.6-13.6 35.7 0 49.3l195.3 195.3c13.6 13.6 35.7 13.5 49.3 0 13.5-13.6 13.5-35.8-0.1-49.4zM103.4 769.9c-18.4 18.4-18.4 48.6 0 67l15.4 15.4-98.9 98.9 48.6 48.6 98.9-98.9 15.4 15.4c18.4 18.4 48.6 18.4 67 0l39.5-39.5-146.4-146.4-39.5 39.5z"
+                                Fill="Black"
+                                Stretch="Uniform" />
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <Path
+                                Width="6"
+                                Data="M735.136 405.28 512 636 288.864 405.28Z"
+                                Fill="Black"
+                                Stretch="Uniform" />
+                        </Grid>
+
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SizeThumbStyle" TargetType="Thumb">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Thumb">
+                    <Border Background="{TemplateBinding Background}" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region 003 - 各式颜色-->
+    <LinearGradientBrush x:Key="ThumbLeftBackgroudActived" StartPoint="0,0.5" EndPoint="1,0.5">
+        <GradientStop Offset="0" Color="#527A94" />
+        <GradientStop Offset="1" Color="#23509E" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ThumbTopBackgroudActived" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Offset="0" Color="#527A94" />
+        <GradientStop Offset="1" Color="#23509E" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ThumbRightBackgroudActived" StartPoint="0,0.5" EndPoint="1,0.5">
+        <GradientStop Offset="0" Color="#23509E" />
+        <GradientStop Offset="1" Color="#527A94" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ThumbBottomBackgroudActived" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Offset="0" Color="#23509E" />
+        <GradientStop Offset="1" Color="#527A94" />
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="TitleBackgroudActvied" Color="#2995CA" />
+    <SolidColorBrush x:Key="TitleBackgroudDeActvied" Color="#6B6B6B" />
+    <!--#endregion-->
+
+    <Style x:Key="UartAssistWindowStyle" TargetType="{x:Type local:WindowEx}">
+        <Setter Property="WindowStyle" Value="None" />
+        <Setter Property="AllowsTransparency" Value="True" />
+        <Setter Property="Background" Value="White" />
+        <!--<Setter Property="MinHeight" Value="560" />
+        <Setter Property="MinWidth" Value="450" />-->
+        <Setter Property="Topmost" Value="False" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Window">
+                    <Border
+                        Background="#EFEFEF"
+                        BorderBrush="#040205"
+                        BorderThickness="1">
+                        <DockPanel LastChildFill="True">
+                            <Thumb
+                                Name="PART_ThumbLeft"
+                                Width="3"
+                                Background="{StaticResource ThumbLeftBackgroudActived}"
+                                Cursor="SizeWE"
+                                DockPanel.Dock="Left"
+                                Style="{StaticResource SizeThumbStyle}" />
+                            <Thumb
+                                Name="PART_ThumbTop"
+                                Height="3"
+                                Background="{StaticResource ThumbTopBackgroudActived}"
+                                Cursor="SizeNS"
+                                DockPanel.Dock="Top"
+                                Style="{StaticResource SizeThumbStyle}" />
+                            <Thumb
+                                Name="PART_ThumbRight"
+                                Width="3"
+                                Background="{StaticResource ThumbRightBackgroudActived}"
+                                Cursor="SizeWE"
+                                DockPanel.Dock="Right"
+                                Style="{StaticResource SizeThumbStyle}" />
+                            <Thumb
+                                Name="PART_ThumbBottom"
+                                Height="3"
+                                Background="{StaticResource ThumbBottomBackgroudActived}"
+                                Cursor="SizeNS"
+                                DockPanel.Dock="Bottom"
+                                Style="{StaticResource SizeThumbStyle}" />
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25" />
+                                    <RowDefinition />
+                                    <!--<RowDefinition Height="25"/>-->
+                                </Grid.RowDefinitions>
+                                <!--  头部的标题栏  -->
+                                <Border
+                                    x:Name="PART_TitleBar"
+                                    Grid.Row="0"
+                                    Padding="0,0,0,2"
+                                    BorderBrush="#8A8A8A"
+                                    BorderThickness="0,0,0,1"
+                                    Cursor="Hand">
+                                    <Border>
+                                        <Border.Background>
+                                            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                                <GradientStop Offset="0" Color="#565557" />
+                                                <GradientStop Offset="0.6" Color="#FBFBFB" />
+                                                <GradientStop Offset="1" Color="#B4B4B4" />
+                                            </LinearGradientBrush>
+                                        </Border.Background>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="70" />
+                                                <ColumnDefinition Width="18" />
+                                                <ColumnDefinition />
+                                                <ColumnDefinition Width="8" />
+                                                <ColumnDefinition Width="80" />
+                                            </Grid.ColumnDefinitions>
+                                            <Grid Grid.Column="0" Background="Transparent">
+                                                <Path
+                                                    Margin="-1,0,2,1"
+                                                    Data="M51.1,267.8 C51.1,267.8 72.224998,267.8 72.224998,267.8 81.33419,267.83382 81.343223,257.49775 89.124998,256.79999"
+                                                    SnapsToDevicePixels="True"
+                                                    Stretch="Fill"
+                                                    Stroke="White"
+                                                    StrokeThickness="2" />
+                                                <Path
+                                                    Margin="-1,0,0,0"
+                                                    Data="M51.1,267.8 C51.1,267.8 72.224998,267.8 72.224998,267.8 81.33419,267.83382 81.343223,257.49775 89.124998,256.79999"
+                                                    SnapsToDevicePixels="True"
+                                                    Stretch="Fill"
+                                                    Stroke="#40423B"
+                                                    StrokeThickness="2" />
+                                                <ToggleButton
+                                                    Name="PART_Menu"
+                                                    Margin="0,0,30,0"
+                                                    IsChecked="False"
+                                                    Style="{StaticResource MenuButtonStyle}" />
+                                                <Popup
+                                                    x:Name="PART_MenuPopup"
+                                                    AllowsTransparency="True"
+                                                    IsOpen="{Binding IsChecked, ElementName=PART_Menu, Mode=TwoWay}"
+                                                    Placement="Bottom"
+                                                    PlacementTarget="{Binding ElementName=PART_Menu}"
+                                                    StaysOpen="False">
+                                                    <ContentPresenter Content="{TemplateBinding local:WindowEx.Menu}" />
+                                                </Popup>
+                                            </Grid>
+                                            <Border
+                                                x:Name="PART_TitleBorder"
+                                                Grid.Column="2"
+                                                Margin="10,0,10,0"
+                                                Background="{StaticResource TitleBackgroudActvied}"
+                                                CornerRadius="10">
+                                                <TextBlock
+                                                    HorizontalAlignment="Center"
+                                                    VerticalAlignment="Center"
+                                                    FontSize="14"
+                                                    Foreground="White"
+                                                    Text="{TemplateBinding Title}">
+                                                    <TextBlock.Effect>
+                                                        <DropShadowEffect ShadowDepth="3" Color="Black" />
+                                                    </TextBlock.Effect>
+                                                </TextBlock>
+                                            </Border>
+                                            <CheckBox
+                                                Name="PART_CbTopmost"
+                                                Grid.Column="3"
+                                                Grid.ColumnSpan="2"
+                                                IsChecked="{Binding Topmost, Mode=TwoWay, RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                                                Style="{StaticResource TopmostCheckBoxStyle}" />
+                                            <Grid Grid.Column="4">
+                                                <Path
+                                                    Margin="2,0,-1,1"
+                                                    Data="M51.1,267.8 C51.1,267.8 72.224998,267.8 72.224998,267.8 81.33419,267.83382 81.343223,257.49775 89.124998,256.79999"
+                                                    RenderTransformOrigin="0.5,0.5"
+                                                    SnapsToDevicePixels="True"
+                                                    Stretch="Fill"
+                                                    Stroke="White"
+                                                    StrokeThickness="2">
+                                                    <Path.RenderTransform>
+                                                        <ScaleTransform ScaleX="-1" />
+                                                    </Path.RenderTransform>
+                                                </Path>
+                                                <Path
+                                                    Margin="0,0,-1,0"
+                                                    Data="M51.1,267.8 C51.1,267.8 72.224998,267.8 72.224998,267.8 81.33419,267.83382 81.343223,257.49775 89.124998,256.79999"
+                                                    RenderTransformOrigin="0.5,0.5"
+                                                    SnapsToDevicePixels="True"
+                                                    Stretch="Fill"
+                                                    Stroke="#40423B"
+                                                    StrokeThickness="2">
+                                                    <Path.RenderTransform>
+                                                        <ScaleTransform ScaleX="-1" />
+                                                    </Path.RenderTransform>
+                                                </Path>
+                                                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                                                    <Button
+                                                        x:Name="PART_BtnMini"
+                                                        Content="{StaticResource DiMiniButton}"
+                                                        Style="{StaticResource WindowButtonStyle}" />
+                                                    <Button
+                                                        x:Name="PART_BtnMax"
+                                                        Content="{StaticResource DiMaxButton}"
+                                                        Style="{StaticResource WindowButtonStyle}" />
+                                                    <Button
+                                                        x:Name="PART_BtnClose"
+                                                        Content="{StaticResource DiCloseButton}"
+                                                        Style="{StaticResource WindowButtonStyle}" />
+                                                </StackPanel>
+                                            </Grid>
+                                        </Grid>
+                                    </Border>
+                                </Border>
+
+                                <!--  内容  -->
+                                <Grid Grid.Row="1">
+                                    <ContentPresenter />
+                                </Grid>
+                            </Grid>
+                        </DockPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

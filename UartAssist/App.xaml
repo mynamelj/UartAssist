@@ -1,0 +1,24 @@
+﻿<Application
+    x:Class="UartAssist.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:UartAssist"
+    StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Images/ImageSource.xaml" />
+                <ResourceDictionary Source="/Themes/ButtonStyles.xaml" />
+                <ResourceDictionary Source="/Themes/TextBoxStyles.xaml" />
+                <ResourceDictionary Source="/Themes/RichTextBoxStyles.xaml" />
+                <ResourceDictionary Source="/Themes/TabControlStyles.xaml" />
+                <ResourceDictionary Source="/Themes/ExpanderStyles.xaml" />
+                <ResourceDictionary Source="/Themes/GroupBoxStyles.xaml" />
+                <ResourceDictionary Source="/Themes/ComboBoxStyles.xaml" />
+                <ResourceDictionary Source="/Themes/MenuStyles.xaml" />
+                <ResourceDictionary Source="/Themes/SeparatorStyles.xaml" />
+                <ResourceDictionary Source="/Themes/CheckBoxStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

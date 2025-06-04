@@ -1,0 +1,101 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="{x:Type MenuItem}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="MenuItem">
+                    <Grid
+                        x:Name="Body"
+                        Height="{TemplateBinding Height}"
+                        MinHeight="24"
+                        VerticalAlignment="Center"
+                        Background="#BDEAFA">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="18" />
+                            <ColumnDefinition MinWidth="80" />
+                            <ColumnDefinition Width="15" />
+                        </Grid.ColumnDefinitions>
+                        <Grid
+                            x:Name="DuiHao"
+                            Grid.Column="0"
+                            HorizontalAlignment="Left"
+                            Visibility="Hidden">
+                            <!--  用于放置对号的  -->
+                            <Path
+                                Margin="4"
+                                Data="M771.414658 162.203926L556.219865 807.786499 372.776604 567.897074l-49.389265 45.861718-24.694633-24.694632 88.194084-91.721631 155.222888 186.972614 179.915715-546.804043 49.389265 24.692826z"
+                                Fill="#000000"
+                                Stretch="Uniform" />
+                        </Grid>
+                        <Grid Grid.Column="1" VerticalAlignment="Center">
+                            <TextBlock x:Name="Content" Text="{TemplateBinding Header}" />
+                        </Grid>
+                        <Grid
+                            Grid.Column="2"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center">
+                            <Path
+                                x:Name="arrow"
+                                Margin="3"
+                                Data="M1024 255.996 511.971 767.909 0 255.996 1024 255.996z"
+                                Fill="#000000"
+                                RenderTransformOrigin="0.5,0.5"
+                                Stretch="Uniform">
+                                <Path.RenderTransform>
+                                    <RotateTransform Angle="-90" />
+                                </Path.RenderTransform>
+                            </Path>
+                        </Grid>
+                        <Popup
+                            AllowsTransparency="True"
+                            IsOpen="{TemplateBinding IsSubmenuOpen}"
+                            Placement="Right">
+                            <Border
+                                Margin="0,0,3,3"
+                                Padding="2"
+                                Background="#F0F0F0"
+                                BorderBrush="#A0A0A0"
+                                BorderThickness="1">
+                                <Border.Effect>
+                                    <DropShadowEffect
+                                        Direction="-45"
+                                        Opacity="0.6"
+                                        ShadowDepth="3"
+                                        Color="Black" />
+                                </Border.Effect>
+                                <StackPanel IsItemsHost="True" Orientation="Vertical" />
+                            </Border>
+                        </Popup>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Body" Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
+                                        <GradientStop Offset="0" Color="#028080" />
+                                        <GradientStop Offset="1" Color="#F38080" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter TargetName="Content" Property="TextBlock.Foreground" Value="#FF0000" />
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="True" />
+                                <Condition Property="Role" Value="SubmenuHeader" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter Property="IsSubmenuOpen" Value="True" />
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="DuiHao" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="Role" Value="SubmenuItem">
+                            <Setter TargetName="arrow" Property="Visibility" Value="Hidden" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
